@@ -1,0 +1,1671 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Agwhotu Joshua Ejaigbe - Web Developer and Software Developer Portfolio">
+<meta name="theme-color" content="#ffffff">
+
+<title>Agwhotu Joshua Ejaigbe | Developer Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --blue: #1266e8;
+    --blue-dark: #0847ae;
+    --blue-light: #eaf3ff;
+    --navy: #09234b;
+    --text: #405675;
+    --muted: #7185a3;
+    --white: #ffffff;
+    --light: #f5f9ff;
+    --border: #dce8f7;
+    --shadow: 0 12px 35px rgba(10,61,140,.09);
+    --transition: .3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--navy);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+.container {
+    width: min(1150px, 90%);
+    margin: auto;
+}
+
+section {
+    padding: 95px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-heading span {
+    color: var(--blue);
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+    max-width: 650px;
+    margin: auto;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 13px 23px;
+    border-radius: 9px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    color: white;
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    box-shadow: 0 8px 20px rgba(18,102,232,.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(18,102,232,.3);
+}
+
+.btn-outline {
+    background: white;
+    color: var(--blue);
+    border: 1px solid var(--border);
+}
+
+.btn-outline:hover {
+    background: var(--blue-light);
+    border-color: var(--blue);
+    transform: translateY(-3px);
+}
+
+/* NAVIGATION */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: .92rem;
+    font-weight: 700;
+    color: var(--text);
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.nav-links .nav-cta {
+    color: white;
+    background: var(--blue);
+    padding: 11px 20px;
+    border-radius: 8px;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: var(--blue);
+    font-size: 1.9rem;
+}
+
+/* HERO */
+
+.hero {
+    width: min(1150px, 90%);
+    min-height: 100vh;
+    margin: auto;
+    padding: 135px 0 75px;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    padding: 9px 15px;
+    margin-bottom: 23px;
+    font-size: .8rem;
+    font-weight: 800;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #16a36a;
+    box-shadow: 0 0 0 5px rgba(22,163,106,.12);
+}
+
+.hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(2.7rem, 5vw, 4.4rem);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero-description {
+    color: var(--text);
+    font-size: 1.04rem;
+    max-width: 570px;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 23px;
+}
+
+.hero-note {
+    color: var(--muted);
+    font-size: .86rem;
+    font-weight: 700;
+}
+
+/* 3D AI ROBOT */
+
+.robot-stage {
+    position: relative;
+    min-height: 490px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 50% 40%, #ffffff 0%, #eaf3ff 52%, #d7e8ff 100%);
+    box-shadow: var(--shadow);
+}
+
+#robotCanvas {
+    display: block;
+    width: 100%;
+    height: 490px;
+    outline: none;
+    touch-action: pan-y;
+}
+
+.robot-caption {
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--blue-dark);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    pointer-events: none;
+}
+
+.robot-tag {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    padding: 8px 13px;
+    border-radius: 30px;
+    background: white;
+    color: var(--blue);
+    font-size: .75rem;
+    font-weight: 800;
+    box-shadow: var(--shadow);
+}
+
+.robot-glow {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: rgba(18,102,232,.12);
+    border-radius: 50%;
+    filter: blur(45px);
+    pointer-events: none;
+}
+
+/* ABOUT */
+
+.about-section {
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.about-content h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.7rem;
+    margin-bottom: 17px;
+}
+
+.about-content p {
+    color: var(--text);
+    margin-bottom: 16px;
+}
+
+.about-highlight {
+    padding: 30px;
+    border: 1px solid var(--border);
+    background: linear-gradient(145deg, white, var(--light));
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.about-highlight h4 {
+    color: var(--blue-dark);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.detail-row {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.detail-row:last-child {
+    border-bottom: 0;
+}
+
+.detail-row span {
+    color: var(--muted);
+    font-size: .82rem;
+}
+
+.detail-row strong {
+    overflow-wrap: anywhere;
+    font-size: .93rem;
+}
+
+/* SKILLS */
+
+#skills {
+    background: var(--light);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--blue);
+}
+
+.skill-icon {
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 15px;
+    background: var(--blue-light);
+    color: var(--blue);
+    border-radius: 18px;
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+
+.skill-card h3 {
+    font-size: .98rem;
+}
+
+/* PROJECTS */
+
+.projects-section {
+    background: white;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.project-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: white;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 45px rgba(10,61,140,.15);
+    border-color: var(--blue);
+}
+
+.project-image {
+    height: 275px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #dceaff, #f5f9ff);
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.06);
+}
+
+.project-image.image-missing {
+    display: grid;
+    place-items: center;
+    color: var(--blue-dark);
+    text-align: center;
+    padding: 20px;
+}
+
+.project-image.image-missing img {
+    display: none;
+}
+
+.project-image.image-missing::after {
+    content: attr(data-title);
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.project-info {
+    padding: 24px;
+}
+
+.project-info h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 9px;
+}
+
+.project-info p {
+    color: var(--text);
+    font-size: .94rem;
+    margin-bottom: 15px;
+}
+
+.project-tag {
+    display: inline-block;
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    border-radius: 30px;
+    padding: 6px 13px;
+    font-size: .76rem;
+    font-weight: 800;
+}
+
+/* EDUCATION */
+
+#education {
+    background: var(--light);
+}
+
+.education-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px;
+    background: white;
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--blue);
+    border-radius: 17px;
+    box-shadow: var(--shadow);
+}
+
+.education-card h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.education-card p {
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.education-result {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 14px;
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    border-radius: 7px;
+    font-size: .85rem;
+    font-weight: 800;
+}
+
+/* CONTACT */
+
+.contact-section {
+    background: white;
+}
+
+.contact-panel {
+    padding: 58px 30px;
+    text-align: center;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(135deg, #09234b, #0847ae, #1266e8);
+    box-shadow: 0 18px 45px rgba(18,102,232,.2);
+}
+
+.contact-panel h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    margin-bottom: 12px;
+}
+
+.contact-panel p {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    color: #e3edff;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 13px;
+}
+
+.contact-links a {
+    display: inline-flex;
+    justify-content: center;
+    padding: 12px 20px;
+    color: white;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 9px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.contact-links a:hover {
+    background: white;
+    color: var(--blue-dark);
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--light);
+    border-top: 1px solid var(--border);
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer p {
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+/* REVEAL ANIMATIONS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 950px) {
+    .hero {
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 700px) {
+    section {
+        padding: 75px 0;
+    }
+
+    .nav-inner {
+        min-height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 5% 22px;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 0;
+    }
+
+    .nav-links .nav-cta {
+        display: inline-block;
+        width: fit-content;
+        padding: 10px 18px;
+        margin-top: 8px;
+    }
+
+    .hero {
+        width: 90%;
+        min-height: auto;
+        padding-top: 115px;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin: auto;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .robot-stage {
+        min-height: 400px;
+    }
+
+    #robotCanvas {
+        height: 400px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 240px;
+    }
+
+    .contact-panel {
+        padding: 42px 20px;
+    }
+}
+
+@media(max-width: 420px) {
+    .hero {
+        width: 92%;
+    }
+
+    .hero h1 {
+        font-size: 2.45rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .robot-stage {
+        min-height: 350px;
+    }
+
+    #robotCanvas {
+        height: 350px;
+    }
+
+    .skills-grid {
+        gap: 12px;
+    }
+
+    .skill-card {
+        padding: 20px 10px;
+    }
+
+    .about-highlight,
+    .education-card {
+        padding: 23px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-links a {
+        width: 100%;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="container nav-inner">
+        <a href="#home" class="logo">Agwhotu<span>.</span></a>
+
+        <button class="menu-toggle" id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navLinks">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact" class="nav-cta">Contact Me</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content reveal">
+
+        <div class="hero-label">
+            <span class="status-dot"></span>
+            WEB DEVELOPER & SOFTWARE DEVELOPER
+        </div>
+
+        <h1>
+            Hello, I'm<br>
+            Agwhotu Joshua <span>Ejaigbe.</span>
+        </h1>
+
+        <p class="hero-description">
+            I build responsive websites and practical software
+            solutions that help businesses and people solve
+            real-world problems. I enjoy turning ideas into
+            clean, functional digital experiences.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">Explore My Projects ↗</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+            <a href="Agwhotu-Joshua-Ejaigbe-CV.pdf"
+               class="btn btn-outline" download>Download CV ↓</a>
+        </div>
+
+        <p class="hero-note">
+            HTML · CSS · JavaScript · PHP · Laravel · MySQL
+        </p>
+
+    </div>
+
+    <div class="robot-stage reveal">
+        <div class="robot-glow"></div>
+        <div class="robot-tag">AI ROBOT SYSTEM</div>
+
+        <canvas id="robotCanvas" aria-label="Animated 3D AI robot machine"></canvas>
+
+        <div class="robot-caption">INTELLIGENCE · TECHNOLOGY · INNOVATION</div>
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <span>Get to know me</span>
+            <h2>About Me</h2>
+            <p>A little introduction about my background and interests.</p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-content reveal">
+                <h3>I'm passionate about building useful technology.</h3>
+
+                <p>
+                    My name is Agwhotu Joshua Ejaigbe. I am a Web Developer
+                    and Software Developer with an interest in creating
+                    responsive, user-friendly and functional applications.
+                </p>
+
+                <p>
+                    I have an HND in Computer Science from Delta State
+                    Polytechnic, Otefe-Oghara, Delta State, Nigeria,
+                    graduating with Second Class Upper Division.
+                </p>
+
+                <p>
+                    I am currently undertaking the National Youth Service
+                    Corps (NYSC) programme and continuing to improve my
+                    software development skills.
+                </p>
+
+                <a href="Agwhotu-Joshua-Ejaigbe-CV.pdf"
+                   class="btn btn-primary" download>Download My CV ↓</a>
+            </div>
+
+            <div class="about-highlight reveal">
+                <h4>Personal Information</h4>
+
+                <div class="detail-row">
+                    <span>Full Name</span>
+                    <strong>Agwhotu Joshua Ejaigbe</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Profession</span>
+                    <strong>Web Developer & Software Developer</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Qualification</span>
+                    <strong>HND Computer Science</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Class of Degree</span>
+                    <strong>Second Class Upper</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Service</span>
+                    <strong>Currently undertaking NYSC</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Email</span>
+                    <strong>joshagwhotu@gmail.com</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Location</span>
+                    <strong>Nigeria</strong>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <span>What I work with</span>
+            <h2>My Technical Skills</h2>
+            <p>Technologies and tools I use to build websites and applications.</p>
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-card reveal">
+                <div class="skill-icon">5</div>
+                <h3>HTML5</h3>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-icon">3</div>
+                <h3>CSS3</h3>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-icon">JS</div>
+                <h3>JavaScript</h3>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-icon">P</div>
+                <h3>PHP</h3>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-icon">L</div>
+                <h3>Laravel</h3>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-icon">DB</div>
+                <h3>MySQL</h3>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-icon">B</div>
+                <h3>Bootstrap</h3>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="skill-icon">GH</div>
+                <h3>Git & GitHub</h3>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SIX PROJECTS -->
+<section class="projects-section" id="projects">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <span>My work</span>
+            <h2>Featured Projects</h2>
+            <p>
+                A selection of website and software projects
+                demonstrating my development interests.
+            </p>
+        </div>
+
+        <div class="projects-grid">
+
+            <article class="project-card reveal">
+                <div class="project-image" data-title="Business Website">
+                    <img src="images/Business%20Website.jpg"
+                         alt="Business Website project" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Business Website</h3>
+                    <p>A professional business website for presenting services, information and an online presence.</p>
+                    <span class="project-tag">Web Development</span>
+                </div>
+            </article>
+
+            <article class="project-card reveal">
+                <div class="project-image" data-title="Student Portal">
+                    <img src="images/Student%20Portal.jpg"
+                         alt="Student Portal project" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Student Portal</h3>
+                    <p>A student portal interface for presenting student information and academic-related features.</p>
+                    <span class="project-tag">Portal Application</span>
+                </div>
+            </article>
+
+            <article class="project-card reveal">
+                <div class="project-image" data-title="Banking Dashboard">
+                    <img src="images/Banking%20Dashboard.jpg"
+                         alt="Banking Dashboard project" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Banking Dashboard</h3>
+                    <p>A dashboard concept for displaying account information and financial activities.</p>
+                    <span class="project-tag">Dashboard Design</span>
+                </div>
+            </article>
+
+            <article class="project-card reveal">
+                <div class="project-image" data-title="Hospital Management System">
+                    <img src="images/Hospital%20Management%20System.jpg"
+                         alt="Hospital Management System project" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Hospital Management System</h3>
+                    <p>A management system interface for organizing healthcare and administrative information.</p>
+                    <span class="project-tag">Management System</span>
+                </div>
+            </article>
+
+            <article class="project-card reveal">
+                <div class="project-image" data-title="E-commerce Website">
+                    <img src="images/E-commerce%20Website.jpg"
+                         alt="E-commerce Website project" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>E-commerce Website</h3>
+                    <p>An online shopping website project for presenting products and supporting online shopping.</p>
+                    <span class="project-tag">E-commerce</span>
+                </div>
+            </article>
+
+            <article class="project-card reveal">
+                <div class="project-image" data-title="School Website">
+                    <img src="images/School.png"
+                         alt="School Website project" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>School Website</h3>
+                    <p>A school website project for presenting school information, services and educational content.</p>
+                    <span class="project-tag">Education Website</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <span>My background</span>
+            <h2>Education & Qualification</h2>
+        </div>
+
+        <div class="education-card reveal">
+    <h3>Ordinary National Diploma (OND) – Computer Science</h3>
+    <p>Delta State Polytechnic, Otefe-Oghara, Delta State, Nigeria.</p>
+    <p>Completion year: 2021.</p>
+    <span class="education-result">OND Certificate</span>
+</div>
+
+      <div class="education-card reveal">
+    <h3>Higher National Diploma (HND) – Computer Science</h3>
+    <p>Delta State Polytechnic, Otefe-Oghara, Delta State, Nigeria.</p>
+    <p>Qualification: Second Class Upper Division.</p>
+    <p>Completion year: 2025.</p>
+    <span class="education-result">Second Class Upper Division</span>
+</div>
+
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+    <div class="container">
+
+        <div class="contact-panel reveal">
+            <h2>Let's Work Together</h2>
+
+            <p>
+                Have a project, opportunity or idea you'd like to discuss?
+                Feel free to reach out. I would be glad to hear from you.
+            </p>
+
+            <div class="contact-links">
+                <a href="mailto:joshuaagwhotu@gmail.com">✉ Email Me</a>
+
+                <a href="https://wa.me/2349067744585"
+                   target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+                <a href="https://github.com/josh111-sys"
+                   target="_blank" rel="noopener noreferrer">GitHub</a>
+
+                <a href="https://www.facebook.com/joshuaagwhotu"
+                   target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            © <span id="year"></span> Agwhotu Joshua Ejaigbe.
+            Designed and developed with care.
+        </p>
+    </div>
+</footer>
+
+<!-- THREE.JS: ANIMATED 3D AI ROBOT -->
+<script type="module">
+import * as THREE from
+"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
+
+const canvas = document.getElementById("robotCanvas");
+
+if (canvas) {
+    const scene = new THREE.Scene();
+
+    const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
+    camera.position.set(0, 1.1, 8.5);
+
+    const renderer = new THREE.WebGLRenderer({
+        canvas,
+        alpha: true,
+        antialias: true
+    });
+
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.25;
+
+    /* LIGHTS */
+
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x8ab8ee, 2.5));
+
+    const mainLight = new THREE.DirectionalLight(0xffffff, 3);
+    mainLight.position.set(4, 6, 7);
+    scene.add(mainLight);
+
+    const blueLight = new THREE.PointLight(0x1685ff, 35, 12);
+    blueLight.position.set(-3, 2, 4);
+    scene.add(blueLight);
+
+    const backLight = new THREE.PointLight(0x8ccaff, 25, 10);
+    backLight.position.set(3, -2, -3);
+    scene.add(backLight);
+
+    /* MATERIALS */
+
+    const whiteMetal = new THREE.MeshStandardMaterial({
+        color: 0xf4f8ff,
+        metalness: 0.75,
+        roughness: 0.22
+    });
+
+    const blueMetal = new THREE.MeshStandardMaterial({
+        color: 0x1266e8,
+        metalness: 0.75,
+        roughness: 0.2
+    });
+
+    const darkMetal = new THREE.MeshStandardMaterial({
+        color: 0x10294c,
+        metalness: 0.85,
+        roughness: 0.2
+    });
+
+    const glass = new THREE.MeshStandardMaterial({
+        color: 0x071d3c,
+        metalness: 0.65,
+        roughness: 0.12
+    });
+
+    const eyeMaterial = new THREE.MeshStandardMaterial({
+        color: 0x52c7ff,
+        emissive: 0x168cff,
+        emissiveIntensity: 3
+    });
+
+    /* ROBOT GROUP */
+
+    const robot = new THREE.Group();
+    scene.add(robot);
+
+    /* HELPER: BOX */
+
+    function box(parent, width, height, depth, material, position) {
+        const mesh = new THREE.Mesh(
+            new THREE.BoxGeometry(width, height, depth),
+            material
+        );
+        mesh.position.set(...position);
+        parent.add(mesh);
+        return mesh;
+    }
+
+    /* HELPER: SPHERE */
+
+    function sphere(parent, radius, material, position, scale = [1,1,1]) {
+        const mesh = new THREE.Mesh(
+            new THREE.SphereGeometry(radius, 32, 24),
+            material
+        );
+        mesh.position.set(...position);
+        mesh.scale.set(...scale);
+        parent.add(mesh);
+        return mesh;
+    }
+
+    /* ROBOT BODY */
+
+    const body = new THREE.Group();
+    robot.add(body);
+
+    const chest = box(
+        body, 1.65, 1.65, .85, whiteMetal, [0, -.35, 0]
+    );
+
+    chest.material = whiteMetal;
+
+    /* CHEST PANEL */
+
+    box(body, 1.15, .65, .12, blueMetal, [0, -.28, .47]);
+
+    box(body, .45, .12, .08, darkMetal, [0, -.12, .55]);
+
+    sphere(body, .11, eyeMaterial, [0, -.13, .62]);
+
+    /* CHEST LIGHTS */
+
+    for (let i = 0; i < 3; i++) {
+        sphere(
+            body,
+            .055,
+            eyeMaterial,
+            [-.35 + i * .35, -.55, .55]
+        );
+    }
+
+    /* NECK */
+
+    const neck = new THREE.Mesh(
+        new THREE.CylinderGeometry(.24, .3, .35, 24),
+        darkMetal
+    );
+    neck.position.y = .65;
+    body.add(neck);
+
+    /* HEAD GROUP */
+
+    const head = new THREE.Group();
+    head.position.set(0, 1.45, 0);
+    robot.add(head);
+
+    const headShell = new THREE.Mesh(
+        new THREE.BoxGeometry(1.55, 1.12, .95),
+        whiteMetal
+    );
+    headShell.position.y = .12;
+    head.add(headShell);
+
+    /* FACE DISPLAY */
+
+    box(head, 1.22, .55, .08, glass, [0, .12, .5]);
+
+    /* ROBOT EYES */
+
+    sphere(head, .105, eyeMaterial, [-.34, .15, .57]);
+    sphere(head, .105, eyeMaterial, [.34, .15, .57]);
+
+    /* ROBOT MOUTH */
+
+    box(head, .42, .055, .045, eyeMaterial, [0, -.13, .58]);
+
+    /* HEAD SIDE DETAILS */
+
+    const earLeft = new THREE.Mesh(
+        new THREE.CylinderGeometry(.17, .17, .18, 24),
+        blueMetal
+    );
+    earLeft.rotation.z = Math.PI / 2;
+    earLeft.position.set(-.82, .15, 0);
+    head.add(earLeft);
+
+    const earRight = earLeft.clone();
+    earRight.position.x = .82;
+    head.add(earRight);
+
+    /* ANTENNA */
+
+    const antenna = new THREE.Group();
+    antenna.position.set(0, .75, 0);
+    head.add(antenna);
+
+    const antennaStem = new THREE.Mesh(
+        new THREE.CylinderGeometry(.035, .045, .4, 16),
+        darkMetal
+    );
+    antennaStem.position.y = .18;
+    antenna.add(antennaStem);
+
+    const antennaTip = sphere(
+        antenna, .11, eyeMaterial, [0, .42, 0]
+    );
+
+    /* ARMS */
+
+    function createArm(side) {
+        const arm = new THREE.Group();
+        arm.position.set(side * 1.0, .35, 0);
+        robot.add(arm);
+
+        sphere(arm, .25, blueMetal, [0, 0, 0]);
+
+        const upper = new THREE.Mesh(
+            new THREE.CylinderGeometry(.16, .2, .85, 20),
+            whiteMetal
+        );
+        upper.position.y = -.48;
+        arm.add(upper);
+
+        sphere(arm, .19, blueMetal, [0, -.93, 0]);
+
+        const forearm = new THREE.Mesh(
+            new THREE.CylinderGeometry(.13, .17, .75, 20),
+            whiteMetal
+        );
+        forearm.position.y = -1.35;
+        arm.add(forearm);
+
+        const hand = new THREE.Mesh(
+            new THREE.SphereGeometry(.22, 24, 20),
+            blueMetal
+        );
+        hand.position.y = -1.8;
+        arm.add(hand);
+
+        for (let i = 0; i < 3; i++) {
+            const finger = new THREE.Mesh(
+                new THREE.CylinderGeometry(.045, .05, .2, 12),
+                darkMetal
+            );
+            finger.position.set((i - 1) * .12, -2.0, .04);
+            arm.add(finger);
+        }
+
+        return arm;
+    }
+
+    const leftArm = createArm(-1);
+    const rightArm = createArm(1);
+
+    /* LEGS */
+
+    function createLeg(x) {
+        const leg = new THREE.Group();
+        leg.position.set(x, -1.25, 0);
+        robot.add(leg);
+
+        sphere(leg, .24, blueMetal, [0, 0, 0]);
+
+        const shin = new THREE.Mesh(
+            new THREE.CylinderGeometry(.17, .22, .85, 20),
+            whiteMetal
+        );
+        shin.position.y = -.5;
+        leg.add(shin);
+
+        const foot = new THREE.Mesh(
+            new THREE.BoxGeometry(.55, .25, .75),
+            blueMetal
+        );
+        foot.position.set(0, -.98, .18);
+        leg.add(foot);
+
+        return leg;
+    }
+
+    const leftLeg = createLeg(-.48);
+    const rightLeg = createLeg(.48);
+
+    /* FLOATING TECHNOLOGY RINGS */
+
+    const rings = [];
+
+    for (let i = 0; i < 3; i++) {
+        const ring = new THREE.Mesh(
+            new THREE.TorusGeometry(2.1 + i * .22, .018, 12, 100),
+            new THREE.MeshStandardMaterial({
+                color: i === 1 ? 0x1266e8 : 0x75baff,
+                metalness: .8,
+                roughness: .25
+            })
+        );
+
+        ring.rotation.x = 1.2 + i * .18;
+        ring.rotation.y = i * .6;
+        robot.add(ring);
+        rings.push(ring);
+    }
+
+    /* FLOATING ORBITING PARTICLES */
+
+    const particles = new THREE.Group();
+    robot.add(particles);
+
+    for (let i = 0; i < 18; i++) {
+        const particle = new THREE.Mesh(
+            new THREE.SphereGeometry(.035 + Math.random() * .035, 12, 12),
+            eyeMaterial
+        );
+
+        const angle = (i / 18) * Math.PI * 2;
+        particle.position.set(
+            Math.cos(angle) * 2.25,
+            Math.sin(angle) * 1.8,
+            Math.sin(angle * 2) * .5
+        );
+
+        particles.add(particle);
+    }
+
+    /* FLOOR SHADOW */
+
+    const floor = new THREE.Mesh(
+        new THREE.CircleGeometry(1.65, 48),
+        new THREE.MeshBasicMaterial({
+            color: 0x8bbdff,
+            transparent: true,
+            opacity: .2
+        })
+    );
+
+    floor.rotation.x = -Math.PI / 2;
+    floor.position.y = -2.5;
+    robot.add(floor);
+
+    /* MOUSE MOVEMENT */
+
+    let pointerX = 0;
+    let pointerY = 0;
+
+    canvas.addEventListener("pointermove", event => {
+        const rect = canvas.getBoundingClientRect();
+
+        pointerX = ((event.clientX - rect.left) / rect.width - .5) * 2;
+        pointerY = ((event.clientY - rect.top) / rect.height - .5) * 2;
+    });
+
+    canvas.addEventListener("pointerleave", () => {
+        pointerX = 0;
+        pointerY = 0;
+    });
+
+    /* RESIZE */
+
+    function resize() {
+        const width = canvas.clientWidth;
+        const height = canvas.clientHeight;
+
+        if (!width || !height) return;
+
+        renderer.setSize(width, height, false);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+    }
+
+    const resizeObserver = new ResizeObserver(resize);
+    resizeObserver.observe(canvas);
+    resize();
+
+    /* ANIMATION */
+
+    const clock = new THREE.Clock();
+    let animationId;
+
+    function animate() {
+        animationId = requestAnimationFrame(animate);
+
+        const time = clock.getElapsedTime();
+
+        /* Whole robot turns slowly */
+        robot.rotation.y += .006;
+
+        /* Robot looks around */
+        head.rotation.y +=
+            (pointerX * .25 - head.rotation.y) * .035;
+
+        head.rotation.x +=
+            (-pointerY * .15 - head.rotation.x) * .035;
+
+        /* Robot floats up and down */
+        robot.position.y = Math.sin(time * 1.5) * .12;
+
+        /* Arms move independently */
+        leftArm.rotation.z = -.12 + Math.sin(time * 1.5) * .16;
+        rightArm.rotation.z = .12 - Math.sin(time * 1.5) * .16;
+
+        leftArm.rotation.x = Math.sin(time * 1.2) * .12;
+        rightArm.rotation.x = -Math.sin(time * 1.2) * .12;
+
+        /* Legs make a small walking motion */
+        leftLeg.rotation.x = Math.sin(time * 1.5) * .07;
+        rightLeg.rotation.x = -Math.sin(time * 1.5) * .07;
+
+        /* Antenna light pulses */
+        antennaTip.scale.setScalar(1 + Math.sin(time * 4) * .12);
+
+        /* Orbiting rings */
+        rings.forEach((ring, index) => {
+            ring.rotation.z += .002 + index * .001;
+            ring.rotation.x += .001;
+        });
+
+        particles.rotation.y += .008;
+
+        renderer.render(scene, camera);
+    }
+
+    animate();
+
+    window.addEventListener("pagehide", () => {
+        cancelAnimationFrame(animationId);
+        resizeObserver.disconnect();
+        renderer.dispose();
+    }, { once: true });
+}
+</script>
+
+<!-- WEBSITE INTERACTIONS -->
+<script>
+/* MOBILE NAVIGATION */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+
+    menuToggle.textContent = isOpen ? "×" : "☰";
+});
+
+/* CLOSE MOBILE MENU */
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+    });
+});
+
+/* PROJECT IMAGE FALLBACK */
+
+document.querySelectorAll(".project-image img").forEach(img => {
+    img.addEventListener("error", () => {
+        img.parentElement.classList.add("image-missing");
+    });
+});
+
+/* SCROLL REVEAL */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                currentObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: .12 });
+
+    revealElements.forEach(element => observer.observe(element));
+} else {
+    revealElements.forEach(element => element.classList.add("visible"));
+}
+
+/* FOOTER YEAR */
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
